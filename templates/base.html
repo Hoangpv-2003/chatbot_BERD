@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="data:image/png;base64,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" alt="image",  width="50", height= "50">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Chat support</h4>
+                    <p class="chatbox__description--header">Hi. My name is ChatAI. How can I help you?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>

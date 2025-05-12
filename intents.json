@@ -1,0 +1,532 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Chào bạn",
+        "Xin chào",
+        "Bạn khỏe không?",
+        "Có ai ở đó không?",
+        "Chào",
+        "Chúc một ngày tốt lành"
+      ],
+      "responses": [
+        "Chào bạn :-)",
+        "Xin chào, cảm ơn bạn đã ghé thăm",
+        "Chào bạn, tôi có thể giúp gì cho bạn?",
+        "Chào bạn, tôi có thể giúp gì cho bạn không?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Tạm biệt", "Hẹn gặp lại", "Chào tạm biệt"],
+      "responses": [
+        "Hẹn gặp lại, cảm ơn bạn đã ghé thăm",
+        "Chúc bạn một ngày tốt lành",
+        "Tạm biệt! Hãy quay lại sớm nhé."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Cảm ơn", "Cảm ơn bạn", "Bạn thật hữu ích", "Cảm ơn rất nhiều!"],
+      "responses": ["Rất vui được giúp đỡ!", "Lúc nào cũng được!", "Thật vui khi được giúp bạn"]
+    },
+    {
+      "tag": "items",
+      "patterns": [
+        "Các sản phẩm của bạn là gì?",
+        "Các thiết bị bạn bán có gì?",
+        "Bạn có bán những sản phẩm gì?"
+      ],
+      "responses": [
+        "Chúng tôi bán điện thoại, máy tính bảng và phụ kiện điện tử.",
+        "Chúng tôi có điện thoại di động, máy tính bảng, tai nghe, và các phụ kiện khác."
+      ]
+    },
+    {
+      "tag": "payments",
+      "patterns": [
+        "Bạn có chấp nhận thẻ tín dụng không?",
+        "Bạn có nhận thẻ Mastercard không?",
+        "Tôi có thể thanh toán bằng Paypal không?",
+        "Bạn chỉ nhận tiền mặt à?"
+      ],
+      "responses": [
+        "Chúng tôi chấp nhận thẻ VISA, Mastercard và Paypal.",
+        "Chúng tôi chấp nhận hầu hết các thẻ tín dụng và Paypal."
+      ]
+    },
+    {
+      "tag": "delivery",
+      "patterns": [
+        "Mất bao lâu để giao hàng?",
+        "Giao hàng mất bao lâu?",
+        "Khi nào tôi sẽ nhận được sản phẩm?"
+      ],
+      "responses": [
+        "Giao hàng mất khoảng 2-4 ngày.",
+        "Thời gian giao hàng từ 2-4 ngày."
+      ]
+    },
+    {
+      "tag": "funny",
+      "patterns": [
+        "Kể cho tôi một câu chuyện hài!",
+        "Kể cho tôi điều gì đó vui vẻ!",
+        "Bạn có biết câu chuyện cười nào không?"
+      ],
+      "responses": [
+        "Tại sao chàng trai hipster lại bị bỏng miệng? Vì anh ấy uống cà phê trước khi nó trở nên 'hot'.",
+        "Con trâu nói gì khi con của nó đi học đại học? Bison (bạn biết đấy, 'bison' là một loài động vật nhưng nghe giống 'bye son')."
+      ]
+    },
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có laptop không?",
+        "Có điện thoại nào có sẵn không?",
+        "Bạn có bán máy tính bảng không?",
+        "Bạn có tai nghe nào không?",
+        "smart watch"
+      ],
+      "responses": [
+        "Để tôi kiểm tra xem sản phẩm đó có sẵn không."
+      ]
+    },
+    {
+      "tag": "check_order",
+      "patterns": [
+        "Tôi muốn kiểm tra đơn hàng của mình.",
+        "Làm thế nào để tôi theo dõi đơn hàng?",
+        "Tôi đã đặt hàng, làm thế nào để kiểm tra?"
+      ],
+      "responses": [
+        "Bạn có thể theo dõi đơn hàng của mình qua trang web của chúng tôi.",
+        "Vui lòng cung cấp mã đơn hàng để tôi có thể giúp bạn."
+      ]
+    },
+    {
+      "tag": "check_order_status",
+      "patterns": [
+        "Đơn hàng của tôi đang ở đâu?",
+        "Tình trạng đơn hàng của tôi là gì?",
+        "Đơn hàng của tôi đã được giao chưa?"
+      ],
+      "responses": [
+        "Đơn hàng của bạn đang trong quá trình xử lý.",
+        "Đơn hàng của bạn đã được giao cho dịch vụ vận chuyển."
+      ]
+    },
+    {
+      "tag": "check_return",
+      "patterns": [
+        "Tôi muốn trả hàng.",
+        "Làm thế nào để tôi trả lại sản phẩm?",
+        "Tôi có thể hoàn lại sản phẩm không?"
+      ],
+      "responses": [
+        "Bạn có thể trả hàng trong vòng 30 ngày kể từ ngày nhận hàng.",
+        "Vui lòng cung cấp lý do trả hàng để tôi có thể giúp bạn."
+      ]
+    },
+    {
+      "tag": "check_discount",
+      "patterns": [
+        "Có mã giảm giá nào không?",
+        "Bạn có chương trình khuyến mãi nào không?",
+        "Có giảm giá cho sản phẩm này không?"
+      ],
+      "responses": [
+        "Hiện tại chúng tôi không có mã giảm giá nào.",
+        "Chúng tôi sẽ thông báo khi có chương trình khuyến mãi mới."
+      ]
+    },
+    {
+      "tag": "check_warranty",
+      "patterns": [
+        "Sản phẩm này có bảo hành không?",
+        "Thời gian bảo hành là bao lâu?",
+        "Tôi có thể bảo hành sản phẩm ở đâu?"
+      ],
+      "responses": [
+        "Sản phẩm này có bảo hành 1 năm.",
+        "Bạn có thể bảo hành sản phẩm tại cửa hàng của chúng tôi."
+      ]
+    },
+    {
+      "tag": "check_iphone",
+      "patterns": [
+        "Có iPhone nào không?",
+        "Bạn có bán iPhone không?",
+        "Tôi muốn mua iPhone"
+      ],
+      "responses": ["Chúng tôi có nhiều mẫu iPhone khác nhau, bạn muốn xem mẫu nào?"]
+    },
+    {
+      "tag": "check_iphone_13",
+      "patterns": [
+        "Có iPhone 13 không?",
+        "Bạn có bán iPhone 13 không?",
+        "Tôi muốn mua iPhone 13"
+      ],
+      "responses": ["Chúng tôi có iPhone 13, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_14",
+      "patterns": [
+        "Có iPhone 14 không?",
+        "Bạn có bán iPhone 14 không?",
+        "Tôi muốn mua iPhone 14"
+      ],
+      "responses": ["Chúng tôi có iPhone 14, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_15",
+      "patterns": [
+        "Có iPhone 15 không?",
+        "Bạn có bán iPhone 15 không?",
+        "Tôi muốn mua iPhone 15"
+      ],
+      "responses": ["Chúng tôi có iPhone 15, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_15_pro",
+      "patterns": [
+        "Có iPhone 15 Pro không?",
+        "Bạn có bán iPhone 15 Pro không?",
+        "Tôi muốn mua iPhone 15 Pro"
+      ],
+      "responses": ["Chúng tôi có iPhone 15 Pro, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_15_pro_max",
+      "patterns": [
+        "Có iPhone 15 Pro Max không?",
+        "Bạn có bán iPhone 15 Pro Max không?",
+        "Tôi muốn mua iPhone 15 Pro Max"
+      ],
+      "responses": ["Chúng tôi có iPhone 15 Pro Max, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_14_pro",
+      "patterns": [
+        "Có iPhone 14 Pro không?",
+        "Bạn có bán iPhone 14 Pro không?",
+        "Tôi muốn mua iPhone 14 Pro"
+      ],
+      "responses": ["Chúng tôi có iPhone 14 Pro, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_14_pro_max",
+      "patterns": [
+        "Có iPhone 14 Pro Max không?",
+        "Bạn có bán iPhone 14 Pro Max không?",
+        "Tôi muốn mua iPhone 14 Pro Max"
+      ],
+      "responses": ["Chúng tôi có iPhone 14 Pro Max, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_13_pro",
+      "patterns": [
+        "Có iPhone 13 Pro không?",
+        "Bạn có bán iPhone 13 Pro không?",
+        "Tôi muốn mua iPhone 13 Pro"
+      ],
+      "responses": ["Chúng tôi có iPhone 13 Pro, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_13_pro_max",
+      "patterns": [
+        "Có iPhone 13 Pro Max không?",
+        "Bạn có bán iPhone 13 Pro Max không?",
+        "Tôi muốn mua iPhone 13 Pro Max"
+      ],
+      "responses": ["Chúng tôi có iPhone 13 Pro Max, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_12",
+      "patterns": [
+        "Có iPhone 12 không?",
+        "Bạn có bán iPhone 12 không?",
+        "Tôi muốn mua iPhone 12"
+      ],
+      "responses": ["Chúng tôi có iPhone 12, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_11",
+      "patterns": [
+        "Có iPhone 11 không?",
+        "Bạn có bán iPhone 11 không?",
+        "Tôi muốn mua iPhone 11"
+      ],
+      "responses": ["Chúng tôi có iPhone 11, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_xr",
+      "patterns": [
+        "Có iPhone XR không?",
+        "Bạn có bán iPhone XR không?",
+        "Tôi muốn mua iPhone XR"
+      ],
+      "responses": ["Chúng tôi có iPhone XR, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_xs",
+      "patterns": [
+        "Có iPhone XS không?",
+        "Bạn có bán iPhone XS không?",
+        "Tôi muốn mua iPhone XS"
+      ],
+      "responses": ["Chúng tôi có iPhone XS, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_xs_max",
+      "patterns": [
+        "Có iPhone XS Max không?",
+        "Bạn có bán iPhone XS Max không?",
+        "Tôi muốn mua iPhone XS Max"
+      ],
+      "responses": ["Chúng tôi có iPhone XS Max, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_x",
+      "patterns": [
+        "Có iPhone X không?",
+        "Bạn có bán iPhone X không?",
+        "Tôi muốn mua iPhone X"
+      ],
+      "responses": ["Chúng tôi có iPhone X, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_8",
+      "patterns": [
+        "Có iPhone 8 không?",
+        "Bạn có bán iPhone 8 không?",
+        "Tôi muốn mua iPhone 8"
+      ],
+      "responses": ["Chúng tôi có iPhone 8, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_7",
+      "patterns": [
+        "Có iPhone 7 không?",
+        "Bạn có bán iPhone 7 không?",
+        "Tôi muốn mua iPhone 7"
+      ],
+      "responses": ["Chúng tôi có iPhone 7, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_6s",
+      "patterns": [
+        "Có iPhone 6S không?",
+        "Bạn có bán iPhone 6S không?",
+        "Tôi muốn mua iPhone 6S"
+      ],
+      "responses": ["Chúng tôi có iPhone 6S, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_6",
+      "patterns": [
+        "Có iPhone 6 không?",
+        "Bạn có bán iPhone 6 không?",
+        "Tôi muốn mua iPhone 6"
+      ],
+      "responses": ["Chúng tôi có iPhone 6, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_5s",
+      "patterns": [
+        "Có iPhone 5S không?",
+        "Bạn có bán iPhone 5S không?",
+        "Tôi muốn mua iPhone 5S"
+      ],
+      "responses": ["Chúng tôi có iPhone 5S, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_5c",
+      "patterns": [
+        "Có iPhone 5C không?",
+        "Bạn có bán iPhone 5C không?",
+        "Tôi muốn mua iPhone 5C"
+      ],
+      "responses": ["Chúng tôi có iPhone 5C, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_5",
+      "patterns": [
+        "Có iPhone 5 không?",
+        "Bạn có bán iPhone 5 không?",
+        "Tôi muốn mua iPhone 5"
+      ],
+      "responses": ["Chúng tôi có iPhone 5, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_4s",
+      "patterns": [
+        "Có iPhone 4S không?",
+        "Bạn có bán iPhone 4S không?",
+        "Tôi muốn mua iPhone 4S"
+      ],
+      "responses": ["Chúng tôi có iPhone 4S, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_iphone_4",
+      "patterns": [
+        "Có iPhone 4 không?",
+        "Bạn có bán iPhone 4 không?",
+        "Tôi muốn mua iPhone 4"
+      ],
+      "responses": ["Chúng tôi có iPhone 4, bạn muốn biết thêm thông tin gì?"]
+    },
+    {
+      "tag": "check_price",
+      "patterns": ["Giá iPhone bao nhiêu?", "iPhone giá bao nhiêu vậy?"],
+      "responses": ["Để mình xem giá giúp bạn nhé!"]
+    },
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán iphone không?",
+        "Bạn có bán iPhone không?",
+        "Có iPhone không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán iPhone. Bạn muốn tìm iPhone nào?"
+      ]
+    },
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán Samsung không?",
+        "Bạn có bán Galaxy không?",
+        "Có Galaxy không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán Galaxy. Bạn muốn tìm Galaxy nào?"
+      ]
+    },
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán Xiaomi không?",
+        "Bạn có bán Redmi không?",
+        "Có Redmi không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán Redmi. Bạn muốn tìm Redmi nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán Oppo không?",
+        "Bạn có bán Reno không?",
+        "Có Reno không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán Reno. Bạn muốn tìm Reno nào?"
+      ]
+    },
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán Vivo không?",
+        "Bạn có bán V không?",
+        "Có V không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán V. Bạn muốn tìm V nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán TV không?",
+        "Bạn có bán TV không?",
+        "Có TV  không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán TV. Bạn muốn tìm TV nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán máy tính không?",
+        "Bạn có bán laptop không?",
+        "Có laptop không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán laptop. Bạn muốn tìm laptop nào?"
+      ]
+    }
+
+
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán máy tính bảng không?",
+        "Bạn có bán tablet không?",
+        "Có tablet không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán tablet. Bạn muốn tìm tablet nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán tai nghe không?",
+        "Bạn có bán headphone không?",
+        "Có headphone không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán headphone. Bạn muốn tìm headphone nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán đồng hồ thông minh không?",
+        "Bạn có bán smartwatch không?",
+        "Có smartwatch không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán smartwatch. Bạn muốn tìm smartwatch nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán phụ kiện không?",
+        "Bạn có bán accessories không?",
+        "Có accessories không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán accessories. Bạn muốn tìm accessories nào?"
+      ]
+    }
+    ,
+    {
+      "tag": "check_product",
+      "patterns": [
+        "Bạn có bán ốp lưng không?",
+        "Bạn có bán case không?",
+        "Có case không?"
+      ],
+      "responses": [
+        "Dạ, bên mình có bán case. Bạn muốn tìm case nào?"
+      ]
+    }
+
+    
+    
+  ]
+}

@@ -1,0 +1,28 @@
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+
+# Model files (optional)
+bert_ner_model/
+vn-bert-base-uncased/
+
+# Data (optional)
+data/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+*.log
