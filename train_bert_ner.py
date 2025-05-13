@@ -5,8 +5,13 @@ import numpy as np
 from datasets import Dataset
 from evaluate import load as load_metric
 
-from transformers import (BertTokenizerFast, BertForTokenClassification,
-                          DataCollatorForTokenClassification, TrainingArguments, Trainer)
+from transformers import (DataCollatorForTokenClassification, TrainingArguments, Trainer)
+from transformers import PhobertTokenizer
+from transformers import RobertaForTokenClassification, AutoTokenizer
+
+model_name = "vinai/phobert-base"  # Hoặc tên mô hình bạn đang sử dụng
+tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False)
+
 
 # 1. Load dataset
 def load_dataset(path):
@@ -23,32 +28,45 @@ label_to_id = {l: i for i, l in enumerate(label_list)}
 id_to_label = {i: l for l, i in label_to_id.items()}
 
 # 3. Load tokenizer & model
-model_name = "bert-base-multilingual-cased"
-tokenizer = BertTokenizerFast.from_pretrained(model_name)
-model = BertForTokenClassification.from_pretrained(model_name, num_labels=len(label_list))
+
+model = RobertaForTokenClassification.from_pretrained(model_name, num_labels=len(label_list))
+
 
 # 4. Tokenize & align labels
 def tokenize_and_align_labels(examples):
-    tokenized_inputs = tokenizer(examples['tokens'],
-                                  truncation=True,
-                                  is_split_into_words=True)
-    labels = []
-    for i, label in enumerate(examples['labels']):
-        word_ids = tokenized_inputs.word_ids(batch_index=i)
-        previous_word_idx = None
-        label_ids = []
-        for word_idx in word_ids:
-            if word_idx is None:
-                label_ids.append(-100)  # Ignore token (like [CLS], [SEP])
-            elif word_idx != previous_word_idx:
-                label_ids.append(label_to_id[label[word_idx]])
-            else:
-                # Same word -> same label or I-label
-                label_ids.append(label_to_id[label[word_idx]])
-            previous_word_idx = word_idx
-        labels.append(label_ids)
-    tokenized_inputs["labels"] = labels
-    return tokenized_inputs
+    input_ids_list = []
+    attention_mask_list = []
+    labels_list = []
+
+    for tokens, labels in zip(examples['tokens'], examples['labels']):
+        # Token hóa từng câu/tập từ
+        encoding = tokenizer(tokens,
+                             is_split_into_words=True,
+                             truncation=True,
+                             padding='max_length',
+                             max_length=128,  # có thể điều chỉnh theo mô hình
+                             return_attention_mask=True,
+                             return_tensors='pt')
+
+        input_ids = encoding['input_ids'][0].tolist()
+        attention_mask = encoding['attention_mask'][0].tolist()
+
+        # Gán nhãn: label từng từ, sau đó gán -100 cho các token vượt quá
+        label_ids = [label_to_id.get(lbl, label_to_id["O"]) for lbl in labels]
+        label_ids = label_ids + [-100] * (len(input_ids) - len(label_ids))
+        label_ids = label_ids[:len(input_ids)]  # cắt lại đúng độ dài input
+
+        input_ids_list.append(input_ids)
+        attention_mask_list.append(attention_mask)
+        labels_list.append(label_ids)
+
+    return {
+        'input_ids': input_ids_list,
+        'attention_mask': attention_mask_list,
+        'labels': labels_list
+    }
+
+
 
 train_dataset = train_dataset.map(tokenize_and_align_labels, batched=True)
 val_dataset = val_dataset.map(tokenize_and_align_labels, batched=True)

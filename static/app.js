@@ -47,6 +47,7 @@ class Chatbox {
         })
         .then(r => r.json())
         .then(r => {
+            
             let msg2 = {name: "Sam", message: r.answer};
             this.message.push(msg2);
             this.updateChatText(chatbox);
@@ -69,6 +70,7 @@ class Chatbox {
           });
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
+        chatmessage.scrollTop = chatmessage.scrollHeight;
     }
 
 }

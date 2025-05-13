@@ -5,10 +5,10 @@ from chat import get_response
 
 app = Flask(__name__)
 
+import sys
+sys.stdout.reconfigure(encoding='utf-8')
 
-@app.route("/")
-def home():
-    return render_template("base.html")
+
 @app.get("/")
 def index_get():
     return render_template("base.html")
