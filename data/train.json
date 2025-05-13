@@ -1,0 +1,52 @@
+[
+    {
+      "tokens": ["Tôi", "muốn", "mua", "iPhone", "15", "Pro", "Max"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "I-PRODUCT", "I-PRODUCT", "I-PRODUCT"]
+    },
+    {
+      "tokens": ["Bạn", "có", "Samsung", "Galaxy", "S24", "Ultra", "không", "?"],
+      "labels": ["O", "O", "B-PRODUCT", "I-PRODUCT", "I-PRODUCT", "I-PRODUCT", "O", "O"]
+    },
+    {
+      "tokens": ["Tôi", "cần", "mua", "một", "chiếc", "MacBook", "Pro"],
+      "labels": ["O", "O", "O", "O", "O", "B-PRODUCT", "I-PRODUCT"]
+    },
+    {
+      "tokens": ["Bạn", "có", "biết", "điện thoại", "nào", "tốt", "không"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "O", "O", "O"]
+    },
+    {
+      "tokens": ["Tôi", "muốn", "mua", "một", "chiếc", "iPad"],
+      "labels": ["O", "O", "O", "O", "O", "B-PRODUCT"]
+    },
+    {
+      "tokens": ["Bạn", "có", "thích", "mua", "điện thoại", "Samsung", "không"],
+      "labels": ["O", "O", "O", "O", "B-PRODUCT", "B-PRODUCT", "O"]
+    },
+    {
+      "tokens": ["Tôi", "cần", "mua", "một", "chiếc", "Sony", "Xperia"],
+      "labels": ["O", "O", "O", "O", "O", "B-PRODUCT", "I-PRODUCT"]
+    },
+    {
+      "tokens": ["Bạn", "có", "biết", "điện thoại", "nào", "tốt nhất"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "O", "O"]
+    },
+    {
+      "tokens": ["Tôi", "muốn", "mua", "một", "chiếc", "điện thoại", "mới"],
+      "labels": ["O", "O", "O", "O", "O", "B-PRODUCT", "O"]
+    },
+    
+    {
+      "tokens": ["Bạn", "có", "biết", "điện thoại", "nào", "tốt", "không"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "O", "O", "O"]
+    },
+    {
+      "tokens": ["Bạn", "có", "smart", "watch", "không"],
+      "labels": ["O", "O", "B-PRODUCT", "I-PRODUCT", "O"]
+    }
+    
+    
+    
+      
+  ]
+  

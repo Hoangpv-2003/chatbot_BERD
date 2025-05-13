@@ -1,0 +1,26 @@
+[
+  {
+      "tokens": ["Tôi", "muốn", "mua", "Tủ lạnh", "sony", "mới"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "I-PRODUCT", "O"]
+  },
+  {
+      "tokens": ["Bạn", "có", "ốp lưng", "Samsung", "Galaxy", "S24", "Ultra", "không", "?"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "I-PRODUCT", "I-PRODUCT", "I-PRODUCT", "O", "O"]
+  },
+  {
+      "tokens": ["Tôi", "cần", "mua", "một", "chiếc", "MacBook", "Pro"],
+      "labels": ["O", "O", "O", "O", "O", "B-PRODUCT", "I-PRODUCT"]
+  },
+  {
+      "tokens": ["Bạn", "có", "biết", "điện thoại", "nào", "tốt nhất"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "O", "O"]
+  },
+  {
+      "tokens": ["Tôi", "muốn", "mua", "một chiếc điện thoại mới"],
+      "labels": ["O", "O", "O", "B-PRODUCT"]
+  },
+  {
+      "tokens": ["Bạn có biết điện thoại nào tốt không"],
+      "labels": ["O", "O", "O", "B-PRODUCT", "O"]
+  }
+]
